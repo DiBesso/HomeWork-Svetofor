@@ -29,26 +29,39 @@
                                     <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ks6-do-mvV"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUS-70-I2k">
-                                <rect key="frame" x="128" y="92" width="150" height="150"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-58-oWq">
+                                <rect key="frame" x="132" y="92" width="150" height="574"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUS-70-I2k">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1h-tf-mZE">
+                                        <rect key="frame" x="0.0" y="212" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-ZA-Zap">
+                                        <rect key="frame" x="0.0" y="424" width="150" height="150"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mF5-Sn-POs">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="KUS-70-I2k" secondAttribute="height" multiplier="1:1" id="ZsN-Ei-hqg"/>
+                                    <constraint firstAttribute="width" constant="150" id="A6N-Sw-C0Z"/>
+                                    <constraint firstAttribute="height" constant="574" id="uc6-bm-RaS"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1h-tf-mZE">
-                                <rect key="frame" x="128" y="311" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mF5-Sn-POs">
-                                <rect key="frame" x="128" y="517" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="fE5-58-oWq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M6K-c1-nYY"/>
+                            <constraint firstItem="fE5-58-oWq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="sAD-xe-WsQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenSignal" destination="mF5-Sn-POs" id="KK8-LH-Vvj"/>
